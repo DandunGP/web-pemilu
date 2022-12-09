@@ -29,4 +29,10 @@ class leaderController extends Controller
         
         return redirect('/input-leader');
     }
+
+    public function leader()
+    {
+        $leader = Leader::withCount('User')->get();
+        return $leader;
+    }
 }

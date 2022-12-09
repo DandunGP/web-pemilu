@@ -29,3 +29,4 @@ Route::get('/choose-leader', [userController::class, 'index'])->name('chooseLead
 Route::post('/choose-leader', [userController::class, 'store'])->name('choosed')->middleware("auth", "checkUser");
 
 
+Route::get('/leaders', [leaderController::class, 'leader']);

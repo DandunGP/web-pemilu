@@ -14,4 +14,9 @@ class Leader extends Model
         'vision_mission',
         'count',
     ];
+
+    public function User()
+    {
+        return $this->hasMany(User::class, 'leader_id');
+    }
 }
