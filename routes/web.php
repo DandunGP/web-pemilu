@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\leaderController;
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/input-leader', [leaderController::class, 'index'])->name('dashboardLeader')->middleware("auth");
+Route::post('/input-leader', [leaderController::class, 'store'])->name('inputLeader')->middleware("auth","checkAdmin");
+Route::get('/login', [loginController::class, 'index'])->name('login')->middleware("guest");
+Route::post('/login', [loginController::class, 'login'])->name('loginAuth')->middleware("guest");
+Route::get('/logout', [loginController::class, 'logout'])->name('logout');
+Route::get('/choose-leader', [userController::class, 'index'])->name('chooseLeader')->middleware("auth", "checkUser");
+Route::post('/choose-leader', [userController::class, 'store'])->name('choosed')->middleware("auth", "checkUser");
+
+
