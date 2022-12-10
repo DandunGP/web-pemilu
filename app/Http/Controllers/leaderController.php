@@ -10,7 +10,7 @@ class leaderController extends Controller
 {
     public function index()
     {
-        $leader = Leader::all();
+        $leader = Leader::withCount('User')->get();
         $user = User::all();
         return view('admin.input_leader',  [
             'leader' => $leader,
@@ -28,11 +28,5 @@ class leaderController extends Controller
         Leader::create($dataValidate);
         
         return redirect('/input-leader');
-    }
-
-    public function leader()
-    {
-        $leader = Leader::withCount('User')->get();
-        return $leader;
     }
 }

@@ -92,7 +92,7 @@
         <tr>
             <td>{{$ld->name}}</td>
             <td>{{$ld->vision_mission}}</td>
-            <td>0</td>
+            <td>{{$ld->user_count}}</td>
         </tr>
     @endforeach
 </table>  
