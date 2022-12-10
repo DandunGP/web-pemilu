@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body{
+    background-color:#8FBC8F;
+}
+
+
+/* Button */
+.btn-green{
+    background-color: #228B22;
+    color: white;
+    border-radius: 10px;
+}
+.btn-green:hover{
+    background-color: #228B22;
+    color: white;
+}
+/* Akhir Button */
+
+/* Home */
+#home{
+    padding-top: 3rem;
+}
+#home h1{
+    font-family: 'Fredoka One', cursive;
+}
+/* Akhir Home */
+
+
+/* Login */
+#login{
+    padding-top: 5rem;
+}
+.image-login{
+    width: 50%;
+}
+#login .card{
+    width: 30rem;
+    border-radius: 30px;
+}
+/* Akhir Login */
+
+/* Input leader */
+#input-leader{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+/* Akhir Input leader */
+
+/* Choose Leader */
+#choose-leader{
+    padding-top: 3rem;
+}
+.choose-image{
+    width: 40%;
+}
+.card-choose{
+    width: 30%;
+}
+/* Akhir Choose Leader */
+
+@media screen and (max-width:994px) {
+
+    /* Login */
+    .image-login{
+        width: 50%;
+    }
+    #login .card{
+        width: 80%;
+    }
+    #login label{
+        font-size: 12px;
+    }
+    #login input::-webkit-input-placeholder {
+        font-size: 10px;
+    }
+    /* Akhir Login */
+
+    /* Input Leader */
+    #input-leader{
+        padding-top: 2rem;
+    }
+    #input-leader h3{
+        text-align: center;
+    }
+    /* Akhir Input Leader */
+
+    /* Choose Leader */
+    #choose-leader{
+        padding-top: 2rem;
+    }
+    .card-choose{
+        width: 80%;
+    }
+    /* Akhir Choose Leader */
+}
