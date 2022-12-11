@@ -6,21 +6,26 @@
             <div class="container mb-3">
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-white">Pilih Ketua Umum :</h3>
+                        <h3 class="text-white text-center">Pilih Ketua Umum</h3>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="row row-cols-2 row-cols-md-4 g-3">
+                <div class="row row-cols-2 row-cols-md-4 g-3 wrap-leader">
                     @foreach ($leader as $ld)
                         <div class="col">
                             <div class="card" data-aos="fade-up" data-aos-duration="800">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-center mb-3">
-                                        <img src="{{ asset('image/default.png') }}" alt="profile"
-                                            class="rounded-circle choose-image">
+                                        <img src="{{ asset('/storage/' . $ld->photo) }}" alt="profile"
+                                            class="choose-image">
                                     </div>
+                                    {{-- <br> --}}
                                     <h5 class="card-title text-center">{{ $ld->name }}</h5>
+                                    {{-- <br> --}}
+                                    <hr>
+                                    <p class="card-text text-center"><b>Rasionalisasi</b></p>
+                                    <p class="card-text text-center">{{ $ld->rationalization }}</p>
                                     <form action="{{ route('choosed') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="choose" value="{{ $ld->id }}">
@@ -38,7 +43,7 @@
         @else
             <div class="container">
                 <div class="row">
-                    <div class="col d-flex justify-content-center">
+                    <div class="col d-flex justify-content-center wrap-logout">
                         <div class="card card-choose">
                             <div class="card-body text-center">
                                 <svg class="animated" id="freepik_stories-completed" xmlns="http://www.w3.org/2000/svg"
@@ -1185,8 +1190,8 @@
                                         </filter>
                                     </defs>
                                 </svg>
-                                <h5 class="card-title mt-4 ">Terima Kasih Sudah Memilih</h5>
-                                <a href="" class="btn btn-green fw-bold">Lihat Hasil</a>
+                                <h5 class="card-title mt-4">Terima Kasih Sudah Memilih</h5>
+                                <a href="{{route('logout')}}" class="btn btn-danger fw-bold">Log Out</a>
                             </div>
                         </div>
                     </div>

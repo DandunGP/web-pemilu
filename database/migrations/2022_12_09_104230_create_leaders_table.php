@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('leaders', function (Blueprint $table) {
             $table->id();
-            $table->string("photo")->nullable();
+            $table->string("photo");
             $table->string("name");
-            $table->string("vision_mission");
+            $table->string("rationalization");
             $table->timestamps();
         });
     }

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="text-white" data-aos="fade">Input Leader</h3>
+                    <h3 class="text-white text-center" data-aos="fade">Input Leader</h3>
                 </div>
             </div>
         </div>
@@ -23,8 +23,12 @@
                                         placeholder="Masukkan Nama">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="vision_mission" class="form-label">Visi & Misi :</label>
-                                    <textarea class="form-control" name="vision_mission" id="vision_mission" name="vission_mission" rows="3"></textarea>
+                                    <label for="rationalization" class="form-label">Rasionalisasi :</label>
+                                    <textarea class="form-control" name="rationalization" id="rationalization" name="vission_mission" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="photo" class="form-label">Foto</label>
+                                    <input type="file" class="form-control" name="photo" id="photo" rows="3">
                                 </div>
                                 <button type="submit" class="btn btn-green fw-bold">Save <i
                                         class="bi bi-download"></i></button>
@@ -32,13 +36,18 @@
                                 <a href="{{ route('logout') }}" class="btn  btn-danger fw-bold">Logout <i
                                         class="bi bi-box-arrow-right"></i></a>
                             </form>
+                            <br>
+                            <form action="{{ route('send') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn  btn-primary fw-bold" class="bi bi-box-arrow-right">Send All Email</button>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow" data-aos="fade-left" data-aos-duration="800">
                         <div class="card-body">
-                            <h5 class="card-title">List Leader :</h5>
+                            <h5 class="card-title">List Leader</h5>
                             @if ($leader)
                                 <div class="table-responsive">
                                     <table class="table">
@@ -46,7 +55,7 @@
                                             <tr class="text-center">
                                                 <th scope="col">No</th>
                                                 <th scope="col">Nama</th>
-                                                <th scope="col">Visi Misi</th>
+                                                <th scope="col">Rasionalisasi</th>
                                                 <th scope="col">Jumlah</th>
                                             </tr>
                                         </thead>
@@ -55,8 +64,8 @@
                                                 <tr class="text-center">
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $ld->name }}</td>
-                                                    <td>{{ $ld->vision_mission }}</td>
-                                                    <td>0</td>
+                                                    <td>{{ $ld->rationalization }}</td>
+                                                    <td>{{ $ld->user_count }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

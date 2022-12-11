@@ -11,7 +11,8 @@ class Leader extends Model
 
     protected $fillable = [
         'name',
-        'vision_mission',
+        'rationalization',
+        'photo',
         'count',
     ];
 

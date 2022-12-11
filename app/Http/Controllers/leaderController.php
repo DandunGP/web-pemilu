@@ -20,12 +20,21 @@ class leaderController extends Controller
 
     public function store(Request $request)
     {
-        $dataValidate = $request->validate([
+        $request->validate([
             'name' => 'required',
-            'vision_mission' => 'required',
+            'rationalization' => 'required',
+            'photo' => 'required|image|file',
         ]);
-        
-        Leader::create($dataValidate);
+
+        $ext = $request->photo->extension();
+        $fileName = $request->fullname . date('dmYhis') . '.' . $ext;
+        $photo = $request->file('photo')->storeAs('photo', $fileName);
+
+        Leader::create([
+            'name' => $request->name,
+            'rationalization' => $request->rationalization,
+            'photo' => $photo,
+        ]);
         
         return redirect('/input-leader');
     }

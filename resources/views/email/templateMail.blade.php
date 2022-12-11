@@ -1,22 +1,19 @@
 @component('mail::message')
 <p><b>Hai teman teman 👋</b></p>
 
-<p>Terimakasih telah mendaftar Capture The Flag (Grow To Be A Cybersecurity Professional).
-    Selanjutnya, mohon untuk menyelesaikan tahap-tahap berikut ini sesuai urutan :</p>
+<p>Sudah waktunya pergantian Ketua Umum FOSTI untuk menjadi FOSTI yang baik kedepannya dengan mengedepankan tujuan FOSTI</p>
 
-<p>1. Login ke akun dengan menggunakan username dan password berikut.</p>
+<p>1. Login ke akun dengan menggunakan email dan password berikut.</p>
 <ul>
     <li>
-        <p><span>Username</span>: <span style="font-weight:600">{{ $dataMail['username'] }}</span></p>
+        <p><span>Email</span>: <span style="font-weight:600">{{ $data['email'] }}</span></p>
     </li>
     <li>
-        <p><span>Password</span>: <span style="font-weight:600">{{ $dataMail['password'] }}</span></p>
+        <p><span>Password</span>: <span style="font-weight:600">{{ $data['password'] }}</span></p>
     </li>
 </ul>
-<p>2. Mengisi data diri team.</p>
-<p>3. Bergabung grup WhatsApp melalui link berikut : https://chat.whatsapp.com/HCyKvgqhXcDJtrAo4jLpEK</p>
+<p>2. Memilih Calon Ketua Umum FOSTI 2023.</p>
 
-<p><span style="font-weight:1000">NB : Untuk pengisian data diri disarankan menggunakan Laptop atau PC</span></p>
 <p>Salam,</p>
-<p>Fostifest</p>
+<p>Mas Mas Ganteng FOSTI</p>
 @endcomponent

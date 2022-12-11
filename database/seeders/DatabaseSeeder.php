@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Leader;
+use App\Models\Email;
 use Illuminate\Support\Facades\Hash;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -47,13 +48,23 @@ class DatabaseSeeder extends Seeder
 
         Leader::create([
             'name' => 'Leader 1',
-            'vision_mission' => 'mencari satu'
+            'rationalization' => 'mencari satu',
+            'photo' => 'cekk'
         ]);
 
         Leader::create([
             'name' => 'Leader 2',
-            'vision_mission' => 'mencari dua'
+            'rationalization' => 'mencari dua',
+            'photo' => 'cekk'
         ]);
 
+        Email::insert([
+            [
+                "email" => 'zapthzero@gmail.com'
+            ],
+            [
+                "email" => 'alifgame762@gmail.com'
+            ]
+        ]);
     }
 }

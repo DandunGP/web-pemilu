@@ -52,12 +52,31 @@ body{
     padding-top: 3rem;
 }
 .choose-image{
-    width: 40%;
+    width: 270px;
+    border-radius: 15px;
+    height: 270px;
+    object-fit: cover;
 }
 .card-choose{
     width: 30%;
 }
 /* Akhir Choose Leader */
+
+.wrap-login{
+    height: 75vh;
+    align-items: center;
+}
+
+.wrap-leader{
+    justify-content: center;
+    height: 75vh;
+    align-items: center;
+}
+
+.wrap-logout{
+    height: 90vh;
+    align-items: center;
+}
 
 @media screen and (max-width:994px) {
 
@@ -91,6 +110,10 @@ body{
     }
     .card-choose{
         width: 80%;
+    }
+    .choose-image{
+        width: 150px;
+        height: 150px;
     }
     /* Akhir Choose Leader */
 }

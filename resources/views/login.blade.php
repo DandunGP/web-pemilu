@@ -5,7 +5,7 @@
 @section('content')
     <section id="login">
         <div class="container">
-            <div class="row">
+            <div class="row wrap-login">
                 <div class="col d-flex justify-content-center">
                     <div class="card shadow-lg" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-body">
