@@ -38,4 +38,12 @@ class leaderController extends Controller
         
         return redirect('/input-leader');
     }
+
+    public function outputLeader()
+    {
+        $data = [
+            'leader' => Leader::withCount('User')->orderBy('user_count', 'desc')->first()
+        ];
+        return view('admin.output_leader',$data);
+    }
 }

@@ -46,17 +46,17 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password')
         ]);
 
-        Leader::create([
-            'name' => 'Leader 1',
-            'rationalization' => 'mencari satu',
-            'photo' => 'cekk'
-        ]);
+        // Leader::create([
+        //     'name' => 'Leader 1',
+        //     'rationalization' => 'mencari satu',
+        //     'photo' => ''
+        // ]);
 
-        Leader::create([
-            'name' => 'Leader 2',
-            'rationalization' => 'mencari dua',
-            'photo' => 'cekk'
-        ]);
+        // Leader::create([
+        //     'name' => 'Leader 2',
+        //     'rationalization' => 'mencari dua',
+        //     'photo' => 'cekk'
+        // ]);
 
         Email::insert([
             [

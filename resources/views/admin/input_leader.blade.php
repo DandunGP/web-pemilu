@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="text-white text-center" data-aos="fade">Input Leader</h3>
+                    <h3 class="text-white text-center text-title" data-aos="fade">Input Leader</h3>
                 </div>
             </div>
         </div>
@@ -28,7 +28,9 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="photo" class="form-label">Foto</label>
-                                    <input type="file" class="form-control" name="photo" id="photo" rows="3">
+                                    <img class="img-preview img-fluid mb-3 " width="30%">
+                                    <input type="file" class="form-control" onchange="previewImage()" name="photo"
+                                        id="photo" rows="3">
                                 </div>
                                 <button type="submit" class="btn btn-green fw-bold">Save <i
                                         class="bi bi-download"></i></button>
@@ -39,8 +41,14 @@
                             <br>
                             <form action="{{ route('send') }}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn  btn-primary fw-bold" class="bi bi-box-arrow-right">Send All Email</button>
+                                <button type="submit" class="btn  btn-primary fw-bold" class="bi bi-box-arrow-right">Send
+                                    All Email</button>
                             </form>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <a href="{{ route('leader') }}" class="btn btn-info text-white d-grid fw-bold">Hasil</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

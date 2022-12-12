@@ -6,7 +6,7 @@
             <div class="container mb-3">
                 <div class="row">
                     <div class="col">
-                        <h3 class="text-white text-center">Pilih Ketua Umum</h3>
+                        <h3 class="text-white text-center text-title">Pilih Ketua Umum</h3>
                     </div>
                 </div>
             </div>
@@ -1191,7 +1191,7 @@
                                     </defs>
                                 </svg>
                                 <h5 class="card-title mt-4">Terima Kasih Sudah Memilih</h5>
-                                <a href="{{route('logout')}}" class="btn btn-danger fw-bold">Log Out</a>
+                                <a href="{{ route('logout') }}" class="btn btn-danger fw-bold">Log Out</a>
                             </div>
                         </div>
                     </div>

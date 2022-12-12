@@ -5,6 +5,12 @@ body{
 }
 
 
+/* Judul Text */
+.text-title{
+    font-family: 'Fredoka One', cursive;
+}
+/* Akhir Judul Text */
+
 /* Button */
 .btn-green{
     background-color: #228B22;
@@ -62,6 +68,7 @@ body{
 }
 /* Akhir Choose Leader */
 
+/* Wrap */
 .wrap-login{
     height: 75vh;
     align-items: center;
@@ -77,6 +84,20 @@ body{
     height: 90vh;
     align-items: center;
 }
+
+.wrap-voting{
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+}
+/* Akhir Wrap */
+
+/* Leader */
+#leader{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+/* Akhir Leader */
 
 @media screen and (max-width:994px) {
 

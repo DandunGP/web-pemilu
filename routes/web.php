@@ -30,4 +30,4 @@ Route::post('/choose-leader', [userController::class, 'store'])->name('choosed')
 Route::post('/input-leader/send-email', [adminController::class, 'sendAllEmail'])->name('send')->middleware("auth", "checkAdmin");
 
 
-Route::get('/leaders', [leaderController::class, 'leader']);
+Route::get('/leaders', [leaderController::class, 'outputLeader'])->name('leader');

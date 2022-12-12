@@ -21,6 +21,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="{{ asset('js/previewImage.js') }}"></script>
 </body>
 
 </html>
