@@ -42,7 +42,8 @@ class leaderController extends Controller
     public function outputLeader()
     {
         $data = [
-            'leader' => Leader::withCount('User')->orderBy('user_count', 'desc')->first()
+            'leader' => Leader::withCount('User')->orderBy('user_count', 'desc')->first(),
+            'leaders' => Leader::withCount('User')->orderBy('user_count','desc')->get()
         ];
         return view('admin.output_leader',$data);
     }
