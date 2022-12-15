@@ -24,8 +24,10 @@ body{
 /* Akhir Button */
 
 /* Home */
-#home{
-    padding-top: 3rem;
+
+.wrap-home{
+    align-items: center;
+    height: 100vh;
 }
 #home h1{
     font-family: 'Fredoka One', cursive;
@@ -104,7 +106,9 @@ body{
 /* Akhir Leader */
 
 @media screen and (max-width:994px) {
-
+    #home h1{
+        margin-top: -20vh;
+    }
     /* Login */
     .image-login{
         width: 50%;
@@ -145,6 +149,9 @@ body{
     /* Leader */
     .leader-card{
         width: 50%;
+    }
+    #leader .list{
+        margin-top: -10vh;
     }
     /* Akhir Leader */
 }

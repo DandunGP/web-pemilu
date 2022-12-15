@@ -23,10 +23,36 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="container ">
-            <div class="row ">
-                <div id="piechart" class="d-flex justify-content-center"></div>
+        <div class="container list">
+            <div class="row">
+                <div class="card shadow" data-aos="fade-left" data-aos-duration="800">
+                    <div class="card-body">
+                        <h5 class="card-title">List Leader</h5>                       
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Rasionalisasi</th>
+                                            <th scope="col">Jumlah</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($leaders as $ld)
+                                            <tr class="text-center">
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $ld->name }}</td>
+                                                <td>{{ $ld->rationalization }}</td>
+                                                <td>{{ $ld->user_count }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
             </div>
-        </div> --}}
+        </div>
     </section>
 @endsection

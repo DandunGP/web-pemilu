@@ -3,7 +3,7 @@
 @section('content')
     <section id="home">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 g-4 align-items-center">
+            <div class="row row-cols-1 row-cols-md-2  wrap-home">
                 <div class="col">
                     <svg class="animated" id="freepik_stories-team-work" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -14,7 +14,7 @@
                 <div class="row row-cols-2 row-cols-md-4 g-3 wrap-leader">
                     @foreach ($leader as $ld)
                         <div class="col">
-                            <div class="card" data-aos="fade-up" data-aos-duration="800">
+                            <div class="card" style="" data-aos="fade-up" data-aos-duration="800">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-center mb-3">
                                         <img src="{{ asset('/storage/' . $ld->photo) }}" alt="profile"
@@ -22,10 +22,10 @@
                                     </div>
                                     {{-- <br> --}}
                                     <h5 class="card-title text-center">{{ $ld->name }}</h5>
-                                    {{-- <br> --}}
+                                    {{-- <br>
                                     <hr>
                                     <p class="card-text text-center"><b>Rasionalisasi</b></p>
-                                    <p class="card-text text-center">{{ $ld->rationalization }}</p>
+                                    <p class="card-text text-center">{{ $ld->rationalization }}</p> --}}
                                     <form action="{{ route('choosed') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="choose" value="{{ $ld->id }}">
