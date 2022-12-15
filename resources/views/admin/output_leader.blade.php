@@ -34,7 +34,6 @@
                                         <tr class="text-center">
                                             <th scope="col">No</th>
                                             <th scope="col">Nama</th>
-                                            <th scope="col">Rasionalisasi</th>
                                             <th scope="col">Jumlah</th>
                                         </tr>
                                     </thead>
@@ -43,7 +42,6 @@
                                             <tr class="text-center">
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $ld->name }}</td>
-                                                <td>{{ $ld->rationalization }}</td>
                                                 <td>{{ $ld->user_count }}</td>
                                             </tr>
                                         @endforeach

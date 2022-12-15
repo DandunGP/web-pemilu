@@ -105,6 +105,10 @@ body{
     width: 25%;
     border-radius: 15px;
 }
+
+.text-overflow-table{
+    text-overflow: ellipsis;
+}
 /* Akhir Leader */
 
 @media screen and (max-width:994px) {
