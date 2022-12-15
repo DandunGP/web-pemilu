@@ -13,24 +13,20 @@
             <div class="container">
                 <div class="row row-cols-2 row-cols-md-4 g-3 wrap-leader">
                     @foreach ($leader as $ld)
-                        <div class="col">
-                            <div class="card" style="" data-aos="fade-up" data-aos-duration="800">
+                        <div class="col d-flex justify-content-center">
+                            <div class="card card-choose" style="" data-aos="fade-up" data-aos-duration="800">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-center mb-3">
                                         <img src="{{ asset('/storage/' . $ld->photo) }}" alt="profile"
                                             class="choose-image">
                                     </div>
-                                    {{-- <br> --}}
                                     <h5 class="card-title text-center">{{ $ld->name }}</h5>
-                                    {{-- <br>
                                     <hr>
-                                    <p class="card-text text-center"><b>Rasionalisasi</b></p>
-                                    <p class="card-text text-center">{{ $ld->rationalization }}</p> --}}
                                     <form action="{{ route('choosed') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="choose" value="{{ $ld->id }}">
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-green fw-bold">Vote
+                                        <div class="d-grid ">
+                                            <button type="submit" class="btn btn-green button-vote fw-bold">Vote
                                                 <i class="bi bi-star-fill"></i></button>
                                         </div>
                                     </form>
@@ -44,7 +40,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col d-flex justify-content-center wrap-logout">
-                        <div class="card card-choose">
+                        <div class="card">
                             <div class="card-body text-center">
                                 <svg class="animated" id="freepik_stories-completed" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"

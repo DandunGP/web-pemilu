@@ -58,6 +58,10 @@ body{
 /* Choose Leader */
 #choose-leader{
     padding-top: 3rem;
+    font-size: 1.333333333px;
+}
+.card-choose{
+    font-size: 10em;
 }
 .choose-image{
     width: 270px;
@@ -65,12 +69,10 @@ body{
     height: 270px;
     object-fit: cover;
 }
-.card-choose{
-    width: 30%;
-}
 /* Akhir Choose Leader */
 
 /* Wrap */
+
 .wrap-login{
     height: 75vh;
     align-items: center;
@@ -136,9 +138,6 @@ body{
     /* Choose Leader */
     #choose-leader{
         padding-top: 2rem;
-    }
-    .card-choose{
-        width: 80%;
     }
     .choose-image{
         width: 150px;
