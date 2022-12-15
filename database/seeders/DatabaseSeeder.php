@@ -30,41 +30,5 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password'),
             'role' => 'Admin'
         ]);
-
-        User::create([
-            'email' => 'test2@example.com',
-            'password' => Hash::make('password')
-        ]);
-
-        User::create([
-            'email' => 'test3@example.com',
-            'password' => Hash::make('password')
-        ]);
-
-        User::create([
-            'email' => 'test4@example.com',
-            'password' => Hash::make('password')
-        ]);
-
-        // Leader::create([
-        //     'name' => 'Leader 1',
-        //     'rationalization' => 'mencari satu',
-        //     'photo' => ''
-        // ]);
-
-        // Leader::create([
-        //     'name' => 'Leader 2',
-        //     'rationalization' => 'mencari dua',
-        //     'photo' => 'cekk'
-        // ]);
-
-        Email::insert([
-            [
-                "email" => 'zapthzero@gmail.com'
-            ],
-            [
-                "email" => 'alifgame762@gmail.com'
-            ]
-        ]);
     }
 }
